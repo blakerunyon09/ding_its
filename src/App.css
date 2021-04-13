@@ -2,11 +2,11 @@
 
 *{
   margin: 0;
-  font-family: 'Lobster';
-  font-weight: 900;
 }
 
 header {
+  font-family: 'Lobster';
+  font-weight: 900;
   text-align: center;
   background-color: burlywood;
   padding: 20px 0;
@@ -22,7 +22,7 @@ header span {
 }
 
 form {
-  margin: 25px auto;
+  padding: 25px auto;
   text-align: center;
 }
 
@@ -31,6 +31,7 @@ section {
   flex-flow: column nowrap;
   width: fit-content;
   margin: auto;
+  background: #e3e3e3
 }
 
 @media only screen and (min-width: 350px) {
@@ -49,7 +50,7 @@ article {
 }
 
 article:hover {
-  transform: scale(1.025)
+  transform: scale(1.002)
 }
 
 article div {
@@ -58,15 +59,25 @@ article div {
   margin: 10px 0;
 }
 
+article h3 {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+  text-align: center;
+  margin: auto
+}
+
 article button {
-  background-color: #ffb79d;
+  background-color: #1345ff;
   border-radius: 5px;
-  margin-top: 5px;
-  border: 1px solid whitesmoke;
+  margin: 15px 0 5px 0;
+  border: 1px solid #1345ff;
 }
 
 article a {
+  padding: 25px 0;
   text-decoration: none;
-  color: #ff5a1d;
+  color: whitesmoke;
   font-weight: bold;
 }

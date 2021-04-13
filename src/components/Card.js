@@ -5,7 +5,7 @@ export default function Card({ recipe }) {
     <article>
       <img src={recipe.image} alt={recipe.name} className='image' />
       <div>
-        <h3 className='label'>{recipe.label} - {recipe.cuisineType}</h3>
+        <h3 className='label'>{recipe.label}</h3>
         <button className='url'>
           <a href={recipe.url}>See Recipe</a>
         </button>
