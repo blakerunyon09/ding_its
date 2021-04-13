@@ -26,7 +26,7 @@ export default class Searchform extends Component {
           value={this.state.ingredient}
           placeholder='search one ingredient'
         />
-        <input type='submit' value='Submit' />
+        <input type='submit' value='Ding It!' />
       </form>
     );
   }

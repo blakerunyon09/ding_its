@@ -2,6 +2,7 @@ import "./App.css";
 import { Component } from "react";
 import Container from "./components/Container";
 import Searchform from "./components/Searchform";
+import Header from "./components/Header";
 
 class App extends Component {
   state = {
@@ -26,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+        <Header />
         <Searchform getRecipes={this.getRecipes} />
         <Container recipes={this.state.recipes} />
       </div>
