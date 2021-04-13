@@ -1,5 +1,7 @@
 import './App.css';
 import { Component } from 'react'
+import Container from './components/Container';
+
 
 class App extends Component {
 
@@ -25,7 +27,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-  
+        <Container recipes={this.state.recipes} />
       </div>
     );
   }
