@@ -3,10 +3,12 @@ import { Component } from "react";
 import Container from "./components/Container";
 import Searchform from "./components/Searchform";
 import Header from "./components/Header";
+import FavoritesContainer from "./components/FavoritesContainer";
 
 class App extends Component {
   state = {
     recipes: [],
+    favoriteRecipes: [],
   };
 
   APP_ID = "61c15b49";
@@ -24,11 +26,19 @@ class App extends Component {
     this.getRecipes("chicken");
   }
 
+  addFavorite = () => {
+    console.log("hey");
+  };
+
   render() {
     return (
       <div className='App'>
         <Header />
         <Searchform getRecipes={this.getRecipes} />
+        <FavoritesContainer
+          favoriteRecipes={this.state.favoriteRecipes}
+          addFavorite={this.addFavorite}
+        />
         <Container recipes={this.state.recipes} />
       </div>
     );
