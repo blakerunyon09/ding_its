@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.App {
+  background-color: #e3e3e3;
+}
+
 header {
   font-family: 'Lobster';
   font-weight: 900;
@@ -22,7 +26,7 @@ header span {
 }
 
 form {
-  padding: 25px auto;
+  padding: 25px 0;
   text-align: center;
 }
 
@@ -73,6 +77,12 @@ article button {
   border-radius: 5px;
   margin: 15px 0 5px 0;
   border: 1px solid #1345ff;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+article button.favorite {
+  margin-left: 5px;
 }
 
 article a {
@@ -80,4 +90,9 @@ article a {
   text-decoration: none;
   color: whitesmoke;
   font-weight: bold;
+}
+
+.favorites {
+  background-color: powderblue;
+  width: 100%
 }

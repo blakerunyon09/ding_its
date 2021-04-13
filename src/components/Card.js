@@ -1,6 +1,17 @@
 import React from "react";
 
-export default function Card({ recipe }) {
+export default function Card({ recipe, addFavorite, fav }) {
+  
+  function handleClick() {
+    addFavorite(recipe);
+  }
+
+  const addFavButton = () => (
+    <button className='favorite' onClick={handleClick}>
+    Add Recipe
+    </button>
+  )
+
   return (
     <article>
       <img src={recipe.image} alt={recipe.name} className='image' />
@@ -9,6 +20,7 @@ export default function Card({ recipe }) {
         <button className='url'>
           <a href={recipe.url}>See Recipe</a>
         </button>
+        {!fav ? addFavButton() : ''}
       </div>
     </article>
   );
