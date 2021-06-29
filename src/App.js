@@ -26,8 +26,13 @@ class App extends Component {
     this.getRecipes("chicken");
   }
 
-  addFavorite = () => {
-    console.log("hey");
+  addFavorite = (newFav) => {
+    const found = this.state.favoriteRecipes.find(favorite => favorite === newFav)
+    if(!found){
+      this.setState({
+        favoriteRecipes: [...this.state.favoriteRecipes, newFav]
+      })
+    }
   };
 
   render() {
@@ -35,11 +40,11 @@ class App extends Component {
       <div className='App'>
         <Header />
         <Searchform getRecipes={this.getRecipes} />
-        <FavoritesContainer
-          favoriteRecipes={this.state.favoriteRecipes}
-          addFavorite={this.addFavorite}
+        <FavoritesContainer favoriteRecipes={this.state.favoriteRecipes} />
+        <Container 
+          recipes={this.state.recipes} 
+          addFavorite={this.addFavorite} 
         />
-        <Container recipes={this.state.recipes} />
       </div>
     );
   }

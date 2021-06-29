@@ -1,17 +1,14 @@
 import React from "react";
 import Card from "./Card";
 
-export default function FavoritesContainer({ favoriteRecipes, addFavorite }) {
-  const showFavorites = () =>
-    favoriteRecipes.map(recipe => {
-      return (
-        <Card
-          key={recipe.recipe.name}
-          recipe={recipe.recipe}
-          addFavorite={addFavorite}
-        />
-      );
+export default function FavoritesContainer({ favoriteRecipes }) {
+  const showFavorites = () => favoriteRecipes.map(recipe => {
+      return <Card key={recipe.name} recipe={recipe} fav={true} />
     });
 
-  return <section>{showFavorites()}</section>;
+  return (
+    <section className="favorites">
+      {showFavorites()}
+    </section>
+  )
 }
